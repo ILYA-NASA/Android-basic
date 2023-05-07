@@ -1,6 +1,6 @@
 //Напишите программу, которая работает с рассмотренными типами данных с помощью изменяемых и неизменяемых переменных.
 
-const val DEFAULT_HEIGHT = 170
+const val DEFAULT_HEIGHT = 150
 const val DEFAULT_WEIGHT = 40
 
 fun main() {
