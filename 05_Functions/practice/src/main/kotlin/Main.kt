@@ -4,35 +4,18 @@
 
 //Обработать первую половину сообщения следующим образом:
 //2.1. В исходном тексте заменить все символы о на символ 0 (ноль).
-fun replace21(str: String) = str.replace('0', 'o')
-
 //2.2. В получившемся тексте заменить каждый символ сообщения символом, стоящим на 3 правее от исходного
 // (сдвиг каждого символа вправо на 3).
-fun replace22(str: String) = str.map { char -> char + 3 }.joinToString("")
-
 //2.3. В получившемся тексте заменить все символы u на цифру 4.
-fun replace23(str: String) = str.replace('4', 'u')
-
 //2.4. В получившемся тексте заменить все символы s на цифру 5.
-fun replace24(str: String) = str.replace('5', 's')
-
 //2.5. В получившемся тексте заменить каждый символ сообщения символом, стоящим на 1 левее от исходного
 // (сдвиг каждого символа влево на 1).
-fun replace25(str: String) = str.map { char -> char - 1 }.joinToString("")
-
 //Вторую половину сообщения обработать так:
 //3.1. Заменить пробелы на символ _
-fun replace31(str: String) = str.replace('_', ' ')
-
 //3.2. В получившемся тексте заменить каждый символ сообщения символом, стоящим на 4 правее от исходного
 // (сдвиг каждого символа вправо на 4).
-fun replace32(str: String) = str.map { char -> char + 4 }.joinToString("")
-
 //3.3. Развернуть получившуюся строку.
-fun replace33(str: String) = str.reversed()
-
 //4. Соединить обе зашифрованные половины.
-
 
 //В результате работы алгоритма я получил строку: F2p)v"y233{0->c}ttelciFc
 
@@ -41,22 +24,35 @@ fun main() {
     val str = "F2p)v\"y233{0->c}ttelciFc"
     val firstHalfStr = str.substring(0, str.length / 2)
     val secondHalfStr = str.substring(str.length / 2)
-    println(
-        replace21(replace22(replace23(replace24(replace25(firstHalfStr)))))
-                + replace31(replace32(replace33(secondHalfStr)))
-    )
+    println(decryptionFirstHalfStr(firstHalfStr)
+            + decryptionSecondHalfStr(secondHalfStr) /*{ secondHalfStr.map { it - 4 }.joinToString("") }*/)
 }
 
 //Для расшифровки текста напишите функции, которые будут проходить алгоритм в обратном направлении: например,
 // заменить все символы 5 на символ s — обратное действие для пункта 2.4 моего алгоритма.
 
 //1. Создайте функцию для расшифровки первой половины сообщения. Используйте для этого алгоритм, обратный данному.
+fun decryptionFirstHalfStr(str: String) = str
+    .map { it + 1 }
+    .joinToString("")
+    .replace('5', 's')
+    .replace('4', 'u')
+    .map { it - 3 }
+    .joinToString("")
+    .replace('0', 'o')
 
 //2. Создайте функцию для расшифровки второй половины сообщения. Используйте для этого алгоритм, обратный данному.
+fun decryptionSecondHalfStr(
+    str: String,
+//    shift: (str: String) -> String
+) = str
+    .reversed()
+    .map { it - 4 }
+    .joinToString("")
+    .replace('_', ' ')
 
 //3. По желанию. Создайте функцию высшего порядка shift(), с помощью которой можно осуществлять сдвиг всех символов
 // в строке. На вход функция должна:
-
 //принимать строку и функцию преобразования текущего символа (параметр функционального типа);
 //возвращать изменённую строку.
 //Используйте эту функцию в функциях 1 и 2.
