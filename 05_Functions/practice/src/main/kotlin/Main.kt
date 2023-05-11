@@ -24,8 +24,7 @@ fun main() {
     val str = "F2p)v\"y233{0->c}ttelciFc"
     val firstHalfStr = str.substring(0, str.length / 2)
     val secondHalfStr = str.substring(str.length / 2)
-    println(decryptionFirstHalfStr(firstHalfStr)
-            + decryptionSecondHalfStr(secondHalfStr) /*{ secondHalfStr.map { it - 4 }.joinToString("") }*/)
+    println(decryptionFirstHalfStr(firstHalfStr) + decryptionSecondHalfStr(secondHalfStr))
 }
 
 //Для расшифровки текста напишите функции, которые будут проходить алгоритм в обратном направлении: например,
@@ -42,17 +41,26 @@ fun decryptionFirstHalfStr(str: String) = str
     .replace('0', 'o')
 
 //2. Создайте функцию для расшифровки второй половины сообщения. Используйте для этого алгоритм, обратный данному.
-fun decryptionSecondHalfStr(
-    str: String,
-//    shift: (str: String) -> String
-) = str
+/*fun decryptionSecondHalfStr(str: String) = str
     .reversed()
     .map { it - 4 }
     .joinToString("")
-    .replace('_', ' ')
+    .replace('_', ' ')*/
+
+/**
+ * функция реализована с использованием функции высшего порядка shift()
+ */
+fun decryptionSecondHalfStr(str: String): String {
+    var result: String = str.reversed()
+    result = shift(result) { it - 4 }
+    return result.replace('_', ' ')
+}
 
 //3. По желанию. Создайте функцию высшего порядка shift(), с помощью которой можно осуществлять сдвиг всех символов
 // в строке. На вход функция должна:
 //принимать строку и функцию преобразования текущего символа (параметр функционального типа);
 //возвращать изменённую строку.
 //Используйте эту функцию в функциях 1 и 2.
+
+fun shift(sourceString: String, func: (Char) -> Char) =
+    sourceString.map(func).joinToString("")
