@@ -14,7 +14,7 @@ fun main() {
         println("Введите число, которое больше нуля")
         inputNumber = readln().toInt()
     }
-    println(fibonacciCalculation(inputNumber))
+    println("В последовательности Фибоначчи введенное число равно ${fibonacciCalculation(inputNumber)}")
 }
 
 fun fibonacciCalculation(n: Int): Int = if (n == 0 || n == 1) n
