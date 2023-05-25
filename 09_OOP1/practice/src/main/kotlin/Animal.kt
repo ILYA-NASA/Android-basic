@@ -2,7 +2,7 @@ import kotlin.random.Random
 
 open class Animal(
     private var energy: Int,
-    private var weight: Double,
+    private var weight: Int,
     private var currentAge: Int,
     private val maxAge: Int,
     protected val name: String,
@@ -26,8 +26,8 @@ open class Animal(
     }
 
     open fun move(message: String = "$name moving") {
-        if (!isTooOld && energy >= 5 && weight >= 1) {
-            energy = -5
+        if (!isTooOld || energy >= 5 || weight >= 1) {
+            energy -= 5
             weight--
             currentAge = if (tryIncrementAge()) +1 else currentAge
             println(message)
@@ -46,7 +46,7 @@ open class Animal(
 
     open fun giveOffspring(
         energy: Int = Random.nextInt(1, 10),
-        weight: Double = Random.nextDouble(1.0, 5.0),
+        weight: Int = Random.nextInt(1, 5),
         currentAge: Int,
         maxAge: Int = this.maxAge,
         name: String = this.name,
