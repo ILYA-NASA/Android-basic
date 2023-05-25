@@ -5,8 +5,8 @@ open class Animal(
     private var weight: Double,
     private var currentAge: Int,
     private val maxAge: Int,
-    private val name: String,
-) {
+    protected val name: String,
+): NatureReserve() {
     private val isTooOld = currentAge >= maxAge
 
     fun sleep() {
@@ -25,12 +25,12 @@ open class Animal(
         }
     }
 
-    open fun move() {
-        if (!isTooOld && energy > 5 && weight > 1) {
+    open fun move(message: String = "$name moving") {
+        if (!isTooOld && energy >= 5 && weight >= 1) {
             energy = -5
             weight--
             currentAge = if (tryIncrementAge()) +1 else currentAge
-            println("$name moving")
+            println(message)
         }
     }
 
@@ -50,7 +50,7 @@ open class Animal(
         currentAge: Int,
         maxAge: Int = this.maxAge,
         name: String = this.name,
-    ) {
+    ): Animal {
         println(
             """
         Another $name was born,
@@ -60,6 +60,7 @@ open class Animal(
         maximum age $maxAge years.
     """.trimIndent()
         )
+        return Animal(energy, weight, currentAge, maxAge, name)
     }
 
     private fun tryIncrementAge() = Random.nextBoolean()
