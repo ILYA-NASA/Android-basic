@@ -1,20 +1,15 @@
 class DebitCard: BankCard() {
-    override val balance: Double
-        get() = TODO("Not yet implemented")
+    override var balance: Double = 0.0
 
-    override fun replenishBalance() {
-        TODO("Not yet implemented")
+    override fun replenishBalance(amountMoney: Double) {
+        balance += amountMoney
     }
 
-    override fun toPay() {
-        TODO("Not yet implemented")
+    override fun toPay(amountMoney: Double) {
+        balance -= amountMoney
     }
 
-    override fun getBalanceInfo() {
-        TODO("Not yet implemented")
-    }
+    override fun getCardBalanceInfo() = "Debit card balance equal $balance"
 
-    override fun getAvailableFundsInfo() {
-        TODO("Not yet implemented")
-    }
+    override fun getAllFundsInfo() = "All funds equal ${balance + CreditCard().balance}"
 }
