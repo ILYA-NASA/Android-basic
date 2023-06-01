@@ -1,35 +1,45 @@
 fun main() {
     val debitCard = DebitCard()
     println(debitCard.getCardBalanceInfo())
+    println("After topping up the card by 5 000:")
     debitCard.addMoney(5000.0)
-    println("After topping up the card by 5 000:\n"
-            + debitCard.getCardBalanceInfo())
+    println(debitCard.getAllFundsInfo())
+    println("After payment by 3 000:")
+    debitCard.toPay(3000.0)
+    println(debitCard.getAllFundsInfo())
+    println("After payment by 3 000:")
+    debitCard.toPay(3000.0)
+    println(debitCard.getAllFundsInfo())
 
     println()
     val creditCard = CreditCard()
-    println("Credit card with limit of ${creditCard.getCreditLimit()}")
+    println(creditCard.getCardBalanceInfo())
+    println("After topping up the card by 5 000:")
     creditCard.addMoney(5000.0)
-    println("After topping up the card by 5 000:\n" +
-            "Credit part equal ${creditCard.creditPart}\n" +
-            "Own part equal ${creditCard.ownPart}")
+    println(creditCard.getAllFundsInfo())
     println()
+    println(creditCard.getCardBalanceInfo())
+    println("After payment by 5 000:")
     creditCard.toPay(5000.0)
-    println("After payment by 5 000:\n" +
-            "Credit part equal ${creditCard.creditPart}\n" +
-            "Own part equal ${creditCard.ownPart}")
+    println(creditCard.getAllFundsInfo())
     println()
+    println(creditCard.getCardBalanceInfo())
+    println("After payment by 3 000:")
     creditCard.toPay(3000.0)
-    println("After payment by 3 000:\n" +
-            "Credit part equal ${creditCard.creditPart}\n" +
-            "Own part equal ${creditCard.ownPart}")
+    println(creditCard.getAllFundsInfo())
     println()
+    println(creditCard.getCardBalanceInfo())
+    println("After topping up the card by 2 000:")
     creditCard.addMoney(2000.0)
-    println("After topping up the card by 2 000:\n" +
-            "Credit part equal ${creditCard.creditPart}\n" +
-            "Own part equal ${creditCard.ownPart}")
+    println(creditCard.getAllFundsInfo())
     println()
+    println(creditCard.getCardBalanceInfo())
+    println("After topping up the card by 2 000:")
     creditCard.addMoney(2000.0)
-    println("After topping up the card by 2 000:\n" +
-            "Credit part equal ${creditCard.creditPart}\n" +
-            "Own part equal ${creditCard.ownPart}")
+    println(creditCard.getAllFundsInfo())
+    println()
+    println(creditCard.getCardBalanceInfo())
+    println("After payment by 50 000:")
+    creditCard.toPay(50000.0)
+    println(creditCard.getAllFundsInfo())
 }
