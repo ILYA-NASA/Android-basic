@@ -1,4 +1,4 @@
 interface CurrencyConverter {
     val currencyCode: String
-    fun convertRub()
+    fun convertRub(sum: Double): Double
 }
