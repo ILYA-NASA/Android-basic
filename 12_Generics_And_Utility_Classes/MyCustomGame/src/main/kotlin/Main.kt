@@ -1,9 +1,9 @@
 import kotlin.random.Random
 
 fun main() {
-    println(5.getRandom())
-    println(50.getRandom())
-    println(100.getRandom())
+    println(5.getRandomChance())
+    println(50.getRandomChance())
+    println(100.getRandomChance())
 }
 
-fun Int.getRandom() = this > Random.nextInt(100)
+fun Int.getRandomChance() = this >= Random.nextInt(100)
