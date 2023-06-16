@@ -1,17 +1,13 @@
 import java.util.Stack
 
-class Stack<T>(item: T?) {
+class Stack<T> {
     private val javaStackCollection = Stack<T>()
-
-    init {
-        javaStackCollection.push(item)
-    }
 
     fun push(item: T) {
         javaStackCollection.push(item)
     }
 
     fun pop(): T? = javaStackCollection.pop()
-    fun isEmpty(): Boolean = javaStackCollection.isEmpty()
+    fun isEmpty() = javaStackCollection.isEmpty()
     fun printAllElements() = println(javaStackCollection.joinToString(", "))
 }
