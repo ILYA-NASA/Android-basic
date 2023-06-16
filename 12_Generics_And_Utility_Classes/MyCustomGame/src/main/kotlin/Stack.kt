@@ -8,5 +8,5 @@ class Stack<T> {
     }
     fun pop(): T? = javaStackCollection.pop()
     fun isEmpty() = javaStackCollection.isEmpty()
-    fun printAllElements() = println(javaStackCollection.joinToString(", "))
+    fun printAllElements() = println(javaStackCollection.joinToString("\n"))
 }
