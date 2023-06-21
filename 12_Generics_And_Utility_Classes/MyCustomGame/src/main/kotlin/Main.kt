@@ -1,7 +1,8 @@
 import kotlin.random.Random
 
 fun main() {
-    val pistol = Weapons.createPistol()
+    val general = General()
+    println(general.isKilled)
 }
 
 fun Int.getRandomChance() = this >= Random.nextInt(100)
