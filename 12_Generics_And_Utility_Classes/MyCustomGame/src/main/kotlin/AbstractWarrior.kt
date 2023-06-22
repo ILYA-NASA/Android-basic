@@ -6,13 +6,13 @@ abstract class AbstractWarrior : Warrior {
     protected abstract var currentHealth: Int
 
     override fun makeAttack(warrior: Warrior) {
-        if (!weapon.availableBullets) {
-            weapon.reloadingWeapons()
-            return
-        } else {
+        if (weapon.bulletsInClip) {
             weapon.getBullet()
     //        Для каждого из них проверить, соответствует ли патрон точности война и уклонению противника.
     //        Для патронов, которые попадают в противника, рассчитать суммарный урон.
+        } else {
+            weapon.reload()
+            return
         }
     }
 
