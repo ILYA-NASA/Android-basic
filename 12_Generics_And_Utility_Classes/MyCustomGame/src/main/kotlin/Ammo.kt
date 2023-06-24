@@ -7,7 +7,7 @@ enum class Ammo(
     MEDIUM_BULLET(10, 25, 3),
     LARGE_BULLET(20, 10, 5);
 
-    private val criticalDamage = criticalDamageChance.getRandomChance()
+    private val criticalDamage = criticalDamageChance.getChance()
     fun getCurrentDamage() =
         if (criticalDamage) damage * criticalDamageCoefficient
         else damage

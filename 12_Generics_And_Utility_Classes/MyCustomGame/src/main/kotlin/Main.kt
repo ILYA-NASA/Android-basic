@@ -5,4 +5,4 @@ fun main() {
     println(general.isKilled)
 }
 
-fun Int.getRandomChance() = this >= Random.nextInt(100)
+fun Int.getChance() = this >= Random.nextInt(100)
