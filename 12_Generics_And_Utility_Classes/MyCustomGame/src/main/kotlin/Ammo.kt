@@ -1,3 +1,5 @@
+import kotlin.random.Random
+
 enum class Ammo(
     private val damage: Int,
     criticalDamageChance: Int,
@@ -11,4 +13,6 @@ enum class Ammo(
     fun getCurrentDamage() =
         if (criticalDamage) damage * criticalDamageCoefficient
         else damage
+
+    private fun Int.getChance() = this >= Random.nextInt(100)
 }

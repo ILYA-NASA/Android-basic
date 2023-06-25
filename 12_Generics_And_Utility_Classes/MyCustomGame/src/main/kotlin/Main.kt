@@ -1,8 +1,4 @@
-import kotlin.random.Random
-
 fun main() {
-    val general = General()
-    println(general.isKilled)
+    val team = Team().getTeam(10)
+    println(team.joinToString())
 }
-
-fun Int.getChance() = this >= Random.nextInt(100)
