@@ -16,7 +16,7 @@ abstract class AbstractWarrior : Warrior {
         }
     }
 
-    abstract fun causeDamage()
+    abstract fun makeDamage()
 
     override fun takeDamage(damage: Int) {
         currentHealth -= damage

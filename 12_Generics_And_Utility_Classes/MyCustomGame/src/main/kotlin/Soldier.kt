@@ -6,7 +6,7 @@ class Soldier : AbstractWarrior() {
     override var currentHealth = maxHealth
     override val isKilled = currentHealth <= 0
 
-    override fun causeDamage() {
+    override fun makeDamage() {
         TODO("Not yet implemented")
     }
 }

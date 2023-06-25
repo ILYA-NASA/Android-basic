@@ -7,11 +7,12 @@ abstract class AbstractWeapon {
     private fun createBullet() {
         bulletsClip.push(fireType)
     }
+
     fun reload() {
         bulletsClip = Stack()
         createBullet()
     }
-    fun getBullet() {
-        bulletsClip.pop()
-    }
+
+    fun getBullet(): FireType? = bulletsClip.pop()
+
 }
