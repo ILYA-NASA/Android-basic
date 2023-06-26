@@ -1,9 +1,8 @@
 import kotlin.random.Random
 
-class Team {
+class Team(sizeTeam: Int) {
     private val teamList = mutableListOf<AbstractWarrior>()
-
-    fun getTeam(sizeTeam: Int): MutableList<AbstractWarrior> {
+    private fun getTeam(sizeTeam: Int) {
         repeat(sizeTeam) {
             val chance = Random.nextInt(100)
             when {
@@ -12,6 +11,13 @@ class Team {
                 else -> teamList.add(Soldier())
             }
         }
-        return teamList
+    }
+
+    init {
+        this.getTeam(sizeTeam)
+    }
+
+    fun printWarriors() = teamList.forEachIndexed { index, warrior ->
+        println("${index + 1}: $warrior")
     }
 }
