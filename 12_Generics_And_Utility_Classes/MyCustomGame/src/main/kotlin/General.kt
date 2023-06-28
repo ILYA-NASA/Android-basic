@@ -5,8 +5,4 @@ class General : AbstractWarrior() {
     override val weapon: AbstractWeapon = Weapons.createGun()
     override var currentHealth = maxHealth
     override val isKilled = currentHealth <= 0
-
-    override fun makeDamage() {
-        TODO("Not yet implemented")
-    }
 }

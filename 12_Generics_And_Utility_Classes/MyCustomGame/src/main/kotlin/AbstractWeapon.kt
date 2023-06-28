@@ -1,18 +1,25 @@
 abstract class AbstractWeapon {
     abstract val maxBulletsCount: Int
     abstract val fireType: FireType
-    private var bulletsClip: Stack<FireType> = Stack()
+    private var bulletsClip: Stack<Ammo> = Stack()
     val bulletsInClip = !bulletsClip.isEmpty()
 
-    private fun createBullet() {
-        bulletsClip.push(fireType)
+    private fun createBullet(fireType: FireType) {
+        repeat(maxBulletsCount) {
+            bulletsClip.push(
+                when (fireType) {
+                    is FireType.SingleShot -> Ammo.SMALL_BULLET
+                    is FireType.FiringBursts -> Ammo.MEDIUM_BULLET
+                }
+            )
+        }
     }
 
     fun reload() {
         bulletsClip = Stack()
-        createBullet()
+        createBullet(fireType)
     }
 
-    fun getBullet(): FireType? = bulletsClip.pop()
+    fun getBullet(): Ammo = bulletsClip.pop()!!
 
 }
