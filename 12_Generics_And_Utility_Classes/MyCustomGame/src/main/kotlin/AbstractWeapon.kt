@@ -20,6 +20,6 @@ abstract class AbstractWeapon {
         createBullet(fireType)
     }
 
-    fun getBullet(): Ammo = bulletsClip.pop()!!
+    fun getBullet() = bulletsClip.pop()!!
 
 }

@@ -1,7 +1,8 @@
 interface Warrior {
     val isKilled: Boolean
-    val chanceOfMiss: Int
+    val avoidance: Int
+    val accuracy: Int
 
-    fun makeAttack(warrior: Warrior)
+    fun makeAttack(warrior: AbstractWarrior)
     fun takeDamage(damage: Int)
 }
