@@ -1,9 +1,15 @@
 class Battle(
-    val firstCommand: Team,
-    val secondCommand: Team
+    private val firstTeam: Team,
+    private val secondTeam: Team,
 ) {
     val gameOver = false
 
-    fun getBattleState() = BattleState.Progress
-    fun getResult() {}
+    private fun getBattleState(team: Team) = BattleState.Progress.getInfo(team)
+
+    fun makeBattleIteration() {
+        firstTeam.getRandomWarrior().makeAttack(secondTeam.getRandomWarrior())
+        println(getBattleState(firstTeam))
+        secondTeam.getRandomWarrior().makeAttack(firstTeam.getRandomWarrior())
+        println(getBattleState(secondTeam))
+    }
 }
