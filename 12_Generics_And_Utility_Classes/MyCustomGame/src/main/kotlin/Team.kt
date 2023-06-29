@@ -17,6 +17,12 @@ class Team(sizeTeam: Int) {
         this.getTeam(sizeTeam)
     }
 
+    fun getRandomWarrior() = teamList.random()
+
+    fun getSumHealthTeam() = teamList.sumOf { it.currentHealth }
+
+    fun getCountWarriorsTeam() = teamList.count { !it.isKilled }
+
     fun printWarriors() = teamList.forEachIndexed { index, warrior ->
         println("${index + 1}: $warrior")
     }
