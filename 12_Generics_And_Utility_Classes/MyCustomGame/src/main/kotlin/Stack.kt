@@ -7,6 +7,7 @@ class Stack<T> {
         javaStackCollection.push(item)
     }
     fun pop(): T? = javaStackCollection.pop()
-    fun isEmpty() = javaStackCollection.isEmpty()
+    fun isNotEmpty() = javaStackCollection.isNotEmpty()
+    fun getCountElements() = javaStackCollection.count()
     fun printAllElements() = println(javaStackCollection.joinToString("\n"))
 }

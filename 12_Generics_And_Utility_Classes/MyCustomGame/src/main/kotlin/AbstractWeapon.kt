@@ -2,7 +2,7 @@ abstract class AbstractWeapon {
     abstract val maxBulletsCount: Int
     abstract val fireType: FireType
     private var bulletsClip: Stack<Ammo> = Stack()
-    val bulletsInClip = !bulletsClip.isEmpty()
+    val bulletsInClip = bulletsClip.isNotEmpty()
 
     private fun createBullet(fireType: FireType) {
         repeat(maxBulletsCount) {
@@ -14,6 +14,8 @@ abstract class AbstractWeapon {
             )
         }
     }
+
+    fun getBulletsClipCount() = bulletsClip.getCountElements()
 
     fun reload() {
         bulletsClip = Stack()
