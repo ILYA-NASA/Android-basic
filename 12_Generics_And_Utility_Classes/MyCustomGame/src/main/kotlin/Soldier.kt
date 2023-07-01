@@ -5,4 +5,7 @@ class Soldier : AbstractWarrior() {
     override val weapon = Weapons.createPistol()
     override var currentHealth = maxHealth
     override val isKilled = currentHealth <= 0
+
+    override fun toString() =
+        "Soldier (health: $currentHealth, accuracy: $accuracy, avoidance: $avoidance, weapon: pistol, ${if (isKilled) "killed" else "alive"})"
 }

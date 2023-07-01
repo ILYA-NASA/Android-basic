@@ -8,7 +8,6 @@ abstract class AbstractWarrior : Warrior {
             warrior.takeDamage(makeDamage())
         } else {
             weapon.reload()
-            return
         }
     }
 
@@ -17,4 +16,6 @@ abstract class AbstractWarrior : Warrior {
     override fun takeDamage(damage: Int) {
         currentHealth -= damage
     }
+
+    abstract override fun toString(): String
 }
