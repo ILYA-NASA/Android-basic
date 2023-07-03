@@ -8,8 +8,8 @@ fun main() {
     secondTeam.printWarriors()
     println()
     val battle = Battle(firstTeam, secondTeam)
-    for (i in 1..3) {
-        println("Iteration №${i}")
+    for (i in 1..15) {
+        println("Round №${i}")
         battle.makeBattleIteration()
         println()
     }
