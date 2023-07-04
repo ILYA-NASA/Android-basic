@@ -15,6 +15,7 @@ abstract class AbstractWarrior : Warrior {
 
     override fun takeDamage(damage: Int) {
         currentHealth -= damage
+        isKilled = currentHealth <= 0
     }
 
     abstract override fun toString(): String
