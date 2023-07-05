@@ -23,7 +23,7 @@ class Team(sizeTeam: Int) {
 
     fun getCountWarriorsTeam() = teamList.count { !it.isKilled }
 
-    private fun isDestroyed(): Boolean {
+    fun isDestroyed(): Boolean {
         var allKilled = false
         teamList.forEach { allKilled = it.isKilled }
         return allKilled

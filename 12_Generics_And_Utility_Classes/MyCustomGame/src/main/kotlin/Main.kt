@@ -22,4 +22,10 @@ fun main() {
     println()
     println("Second team warriors:")
     secondTeam.printWarriors()
+    println()
+    when {
+        firstTeam.isDestroyed() -> println(BattleState.SecondTeamWin.getInfo())
+        secondTeam.isDestroyed() -> println(BattleState.FirstTeamWin.getInfo())
+        else -> println(BattleState.DrawnGame.getInfo())
+    }
 }

@@ -6,7 +6,15 @@ sealed class BattleState {
         """.trimIndent()
     }
 
-    object FirstTeamWin : BattleState()
-    object SecondTeamWin : BattleState()
-    object DrawnGame : BattleState()
+    object FirstTeamWin : BattleState() {
+        fun getInfo() = "First team potential win"
+    }
+
+    object SecondTeamWin : BattleState() {
+        fun getInfo() = "Second team potential win"
+    }
+
+    object DrawnGame : BattleState() {
+        fun getInfo() = "Potential drawn game"
+    }
 }
