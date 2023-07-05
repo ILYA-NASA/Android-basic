@@ -23,6 +23,14 @@ class Team(sizeTeam: Int) {
 
     fun getCountWarriorsTeam() = teamList.count { !it.isKilled }
 
+    private fun isDestroyed(): Boolean {
+        var allKilled = false
+        teamList.forEach { allKilled = it.isKilled }
+        return allKilled
+    }
+
+    fun isNotDestroyed() = !isDestroyed()
+
     fun printWarriors() = teamList.forEachIndexed { index, warrior ->
         println("${index + 1}: $warrior")
     }
