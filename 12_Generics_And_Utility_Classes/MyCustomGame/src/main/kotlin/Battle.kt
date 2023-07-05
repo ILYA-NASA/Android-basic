@@ -7,9 +7,15 @@ class Battle(
     private fun getBattleState(team: Team) = BattleState.Progress.getInfo(team)
 
     fun makeBattleIteration() {
-        firstTeam.getRandomWarrior().makeAttack(secondTeam.getRandomWarrior())
+        var firstTeamWarrior = firstTeam.getRandomWarrior()
+        var secondTeamWarrior = secondTeam.getRandomWarrior()
+        if (firstTeamWarrior.isKilled || secondTeamWarrior.isKilled) {
+            firstTeamWarrior = firstTeam.getRandomWarrior()
+            secondTeamWarrior = secondTeam.getRandomWarrior()
+        }
+        firstTeamWarrior.makeAttack(secondTeam.getRandomWarrior())
         println(getBattleState(firstTeam))
-        secondTeam.getRandomWarrior().makeAttack(firstTeam.getRandomWarrior())
+        secondTeamWarrior.makeAttack(firstTeam.getRandomWarrior())
         println(getBattleState(secondTeam))
     }
 }
