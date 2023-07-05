@@ -1,6 +1,6 @@
 fun main() {
-    val firstTeam = Team(2)
-    val secondTeam = Team(2)
+    val firstTeam = Team(5)
+    val secondTeam = Team(5)
     println("First team warriors:")
     firstTeam.printWarriors()
     println()
@@ -8,9 +8,16 @@ fun main() {
     secondTeam.printWarriors()
     println()
     val battle = Battle(firstTeam, secondTeam)
-    for (i in 1..15) {
-        println("Round №${i}")
+    var roundCount = 1
+    while (firstTeam.isNotDestroyed() || secondTeam.isNotDestroyed()) {
+        println("Round №$roundCount")
         battle.makeBattleIteration()
+        roundCount++
         println()
     }
+    println("First team warriors:")
+    firstTeam.printWarriors()
+    println()
+    println("Second team warriors:")
+    secondTeam.printWarriors()
 }
