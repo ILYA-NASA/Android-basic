@@ -1,6 +1,8 @@
 fun main() {
-    val firstTeam = Team(5)
-    val secondTeam = Team(5)
+    println("Please, enter the number of players: ")
+    val sizeTeam = readln().toInt()
+    val firstTeam = Team(sizeTeam)
+    val secondTeam = Team(sizeTeam)
     println("First team warriors:")
     firstTeam.printWarriors()
     println()
