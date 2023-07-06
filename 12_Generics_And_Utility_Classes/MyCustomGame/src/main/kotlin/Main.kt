@@ -11,7 +11,7 @@ fun main() {
     println()
     val battle = Battle(firstTeam, secondTeam)
     var roundCount = 1
-    while (firstTeam.isNotDestroyed() || secondTeam.isNotDestroyed()) {
+    while (battle.gameContinues) {
         println("Round №$roundCount")
         battle.makeBattleIteration()
         roundCount++

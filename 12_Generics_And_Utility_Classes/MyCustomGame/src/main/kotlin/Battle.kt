@@ -2,7 +2,7 @@ class Battle(
     private val firstTeam: Team,
     private val secondTeam: Team,
 ) {
-    val gameOver = false
+    var gameContinues = true
 
     private fun getBattleState(team: Team) = BattleState.Progress.getInfo(team)
 
@@ -17,5 +17,6 @@ class Battle(
         println(getBattleState(firstTeam))
         secondTeamWarrior.makeAttack(firstTeam.getRandomWarrior())
         println(getBattleState(secondTeam))
+        gameContinues = firstTeam.isNotDestroyed() || secondTeam.isNotDestroyed()
     }
 }
