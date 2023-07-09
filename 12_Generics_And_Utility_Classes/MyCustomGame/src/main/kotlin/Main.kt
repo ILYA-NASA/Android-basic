@@ -1,31 +1,21 @@
 fun main() {
-    println("Please, enter the number of players: ")
+    println("Please, enter the number of warriors for each teams: ")
     val sizeTeam = readln().toInt()
     val firstTeam = Team(sizeTeam)
     val secondTeam = Team(sizeTeam)
-    println("First team warriors:")
-    firstTeam.printWarriors()
-    println()
-    println("Second team warriors:")
-    secondTeam.printWarriors()
-    println()
+    BattleState.TeamContent.getInfo(firstTeam, secondTeam)
     val battle = Battle(firstTeam, secondTeam)
     var roundCount = 1
     while (battle.gameContinues) {
-        println("Round №$roundCount")
+        println("ROUND №$roundCount")
         battle.makeBattleIteration()
         roundCount++
-        println()
+        println("---------------------------------")
     }
-    println("First team warriors:")
-    firstTeam.printWarriors()
-    println()
-    println("Second team warriors:")
-    secondTeam.printWarriors()
-    println()
     when {
+        firstTeam.isDestroyed() && secondTeam.isDestroyed() -> println(BattleState.DrawnGame.getInfo())
         firstTeam.isDestroyed() -> println(BattleState.SecondTeamWin.getInfo())
         secondTeam.isDestroyed() -> println(BattleState.FirstTeamWin.getInfo())
-        else -> println(BattleState.DrawnGame.getInfo())
     }
+    BattleState.TeamContent.getInfo(firstTeam, secondTeam)
 }
