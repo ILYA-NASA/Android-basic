@@ -7,14 +7,26 @@ sealed class BattleState {
     }
 
     object FirstTeamWin : BattleState() {
-        fun getInfo() = "First team potential win"
+        fun getInfo() = "FIRST TEAM WIN!"
     }
 
     object SecondTeamWin : BattleState() {
-        fun getInfo() = "Second team potential win"
+        fun getInfo() = "SECOND TEAM WIN!"
     }
 
     object DrawnGame : BattleState() {
-        fun getInfo() = "Potential drawn game"
+        fun getInfo() = "DRAWN GAME!"
+    }
+
+    object TeamContent : BattleState() {
+        fun getInfo(firstTeam: Team, secondTeam: Team) {
+            println()
+            println("First team warriors:")
+            firstTeam.printWarriors()
+            println()
+            println("Second team warriors:")
+            secondTeam.printWarriors()
+            println()
+        }
     }
 }
