@@ -10,9 +10,22 @@ class Battle(
         val firstTeamWarrior = firstTeam.getRandomAliveWarrior()
         val secondTeamWarrior = secondTeam.getRandomAliveWarrior()
         firstTeamWarrior.makeAttack(secondTeamWarrior)
-        println("First attacked Second. State second team:\n${getBattleState(secondTeam)}\n")
-        secondTeamWarrior.makeAttack(firstTeamWarrior)
-        println("Second attacked First. State first team:\n${getBattleState(firstTeam)}")
+        println(
+            "FIRST TEAM $firstTeamWarrior\nATTACKED\nSecond team $secondTeamWarrior\nState SECOND TEAM:\n${
+                getBattleState(secondTeam)
+            }\n"
+        )
+        if (secondTeamWarrior.isKilled) {
+            if (secondTeam.isDestroyed()) gameContinues = false
+            return
+        } else {
+            secondTeamWarrior.makeAttack(firstTeamWarrior)
+            println(
+                "SECOND TEAM $secondTeamWarrior\nATTACKED\nFirst team $firstTeamWarrior\nState FIRST TEAM:\n${
+                    getBattleState(firstTeam)
+                }\n"
+            )
+        }
         if (firstTeam.isDestroyed() || secondTeam.isDestroyed()) gameContinues = false
     }
 }
