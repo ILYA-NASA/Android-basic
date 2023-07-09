@@ -2,6 +2,7 @@ import kotlin.random.Random
 
 class Team(sizeTeam: Int) {
     private val teamList = mutableListOf<AbstractWarrior>()
+
     private fun getTeam(sizeTeam: Int) {
         repeat(sizeTeam) {
             val chance = Random.nextInt(100)
@@ -17,19 +18,13 @@ class Team(sizeTeam: Int) {
         this.getTeam(sizeTeam)
     }
 
-    fun getRandomWarrior() = teamList.random()
+    fun getRandomAliveWarrior() = teamList.filter { !it.isKilled }.random()
 
     fun getSumHealthTeam() = teamList.sumOf { it.currentHealth }
 
     fun getCountWarriorsTeam() = teamList.count { !it.isKilled }
 
-    fun isDestroyed(): Boolean {
-        var allKilled = false
-        teamList.forEach { allKilled = it.isKilled }
-        return allKilled
-    }
-
-    fun isNotDestroyed() = !isDestroyed()
+    fun isDestroyed() = teamList.none { !it.isKilled }
 
     fun printWarriors() = teamList.forEachIndexed { index, warrior ->
         println("${index + 1}: $warrior")
