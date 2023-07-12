@@ -1,0 +1,1 @@
+class NoAmmoException : Throwable(message = "This weapon does not have the required number of bullets to fire")
