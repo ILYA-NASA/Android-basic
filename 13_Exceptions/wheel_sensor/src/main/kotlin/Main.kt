@@ -1,7 +1,14 @@
-fun main(args: Array<String>) {
-    println("Hello World!")
-
-    // Try adding program arguments via Run/Debug configuration.
-    // Learn more about running applications: https://www.jetbrains.com/help/idea/running-applications.html.
-    println("Program arguments: ${args.joinToString()}")
+fun main() {
+    print("Please input pressure: ")
+    val pressure = readln().toDouble()
+    val wheel = Wheel()
+    try {
+        wheel.pumpUp(pressure)
+        println("Procedure successful")
+        val correctPressure = runCatching { wheel.getPressure() }
+        if (correctPressure.isSuccess) println("Operation is possible")
+        else println("Operation is impossible")
+    } catch (e: Throwable) {
+        println("Procedure failed")
+    }
 }
