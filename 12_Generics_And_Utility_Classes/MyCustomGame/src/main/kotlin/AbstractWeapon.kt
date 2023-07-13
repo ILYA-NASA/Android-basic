@@ -23,6 +23,10 @@ abstract class AbstractWeapon {
         bulletsInClip = bulletsClip.isNotEmpty()
     }
 
-    fun getBullet() = bulletsClip.pop()!!
+    fun getBullet(): Ammo {
+        val bullet = runCatching { bulletsClip.pop() }
+        if (bullet.isFailure) reload()
+        return bullet.getOrNull()!!
+    }
 
 }
