@@ -4,11 +4,8 @@ abstract class AbstractWarrior : Warrior {
     abstract var currentHealth: Int
 
     override fun makeAttack(warrior: AbstractWarrior) {
-        if (weapon.bulletsInClip) {
-            warrior.takeDamage(makeDamage())
-        } else {
-            weapon.reload()
-        }
+        val attack = runCatching { warrior.takeDamage(makeDamage()) }
+        if (attack.isFailure) weapon.reload()
     }
 
     private fun makeDamage() = weapon.getBullet().getCurrentDamage()
