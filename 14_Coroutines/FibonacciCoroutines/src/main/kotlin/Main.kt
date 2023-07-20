@@ -1,13 +1,20 @@
-import kotlinx.coroutines.delay
-import kotlinx.coroutines.launch
-import kotlinx.coroutines.runBlocking
+import kotlinx.coroutines.*
 
 fun main() = runBlocking {
-    launch { println(Fibonacci.take(5)) }
+
     launch {
-        delay(500)
+        println(Fibonacci.take(5))
+    }
+
+    launch {
         println(Fibonacci.take(10))
     }
-    delay(1000)
+
+    yield() // пропускаем все корутины, чтобы сохранить порядок
     println(Fibonacci.take(15))
+
+    withTimeout(1) { // исключение обрабатывается в библиотеке
+        println(Fibonacci.take(15)) // получаем результат до TimeoutCancellationException
+    }
+
 }
