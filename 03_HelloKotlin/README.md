@@ -1,4 +1,4 @@
-![image](https://github.com/ILYA-NASA/Android-basic/assets/99810114/f805a51a-e60b-4903-9847-0b317d4eca4a)
+![pngaaa com-8908865](https://github.com/ILYA-NASA/Android-basic/assets/99810114/cab78c0c-9306-4bf2-86a1-873a7bd75abd)
 
 ### Kotlin - статически типизированный язык программирования для JVM, Android и браузера.
 ● Современный  
