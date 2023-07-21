@@ -1,4 +1,6 @@
-## Конспекты лекций и мои решения практических заданий курса Android-разработчик:
+![pngaaa com-15864](https://github.com/ILYA-NASA/Android-basic/assets/99810114/941eb7d4-655d-40a0-b26e-98b1af017323)
+
+## Мои конспекты лекций и решения практических заданий курса:
 
 :ballot_box_with_check: [Введение](https://github.com/ILYA-NASA/Android-basic/tree/master/03_HelloKotlin)  
 :ballot_box_with_check: [Переменные](https://github.com/ILYA-NASA/Android-basic/tree/master/04_Variables_types)  
@@ -12,25 +14,25 @@
 :ballot_box_with_check: [Сравнение типов](https://github.com/ILYA-NASA/Android-basic/tree/master/12_Generics_And_Utility_Classes)  
 :ballot_box_with_check: [Исключения](https://github.com/ILYA-NASA/Android-basic/tree/master/13_Exceptions)  
 :ballot_box_with_check: [Корутины](https://github.com/ILYA-NASA/Android-basic/tree/master/14_Coroutines)  
-:black_circle: Потоки данных  
-:black_circle: Начало работы  
-:black_circle: Верстка  
-:black_circle: Компоненты  
-:black_circle: ConstraintLayout  
-:black_circle: Ресурсы проекта  
-:black_circle: Экраны приложения  
-:black_circle: Фрагменты  
-:black_circle: Анимация  
-:black_circle: Локализация приложений  
-:black_circle: Жизненный цикл приложения  
-:black_circle: Основы хранения данных  
-:black_circle: Архитектура презентационного слоя  
-:black_circle: Data Binding  
-:black_circle: Работа с сетью  
-:black_circle: Работа с БД (Room)  
-:black_circle: Архитектура проекта  
-:black_circle: Работа с массивами данных  
-:black_circle: Работа с защищёнными разделами ОС  
-:black_circle: Работа с геопозиционированием  
-:black_circle: Firebase  
-:black_circle: Подготовка к релизу  
+:white_square_button: Потоки данных  
+:white_square_button: Начало работы  
+:white_square_button: Верстка  
+:white_square_button: Компоненты  
+:white_square_button: ConstraintLayout  
+:white_square_button: Ресурсы проекта  
+:white_square_button: Экраны приложения  
+:white_square_button: Фрагменты  
+:white_square_button: Анимация  
+:white_square_button: Локализация приложений  
+:white_square_button: Жизненный цикл приложения  
+:white_square_button: Основы хранения данных  
+:white_square_button: Архитектура презентационного слоя  
+:white_square_button: Data Binding  
+:white_square_button: Работа с сетью  
+:white_square_button: Работа с БД (Room)  
+:white_square_button: Архитектура проекта  
+:white_square_button: Работа с массивами данных  
+:white_square_button: Работа с защищёнными разделами ОС  
+:white_square_button: Работа с геопозиционированием  
+:white_square_button: Firebase  
+:white_square_button: Подготовка к релизу  
