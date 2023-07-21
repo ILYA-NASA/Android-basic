@@ -1,6 +1,6 @@
 ![pngaaa com-15864](https://github.com/ILYA-NASA/Android-basic/assets/99810114/941eb7d4-655d-40a0-b26e-98b1af017323)
 
-## Мои конспекты лекций и решения практических заданий курса:
+## Конспекты лекций и решения практических заданий:
 
 :ballot_box_with_check: [Введение](https://github.com/ILYA-NASA/Android-basic/tree/master/03_HelloKotlin)  
 :ballot_box_with_check: [Переменные](https://github.com/ILYA-NASA/Android-basic/tree/master/04_Variables_types)  
@@ -36,3 +36,5 @@
 :white_square_button: Работа с геопозиционированием  
 :white_square_button: Firebase  
 :white_square_button: Подготовка к релизу  
+
+© [ILYA_NASA](https://taplink.cc/il.nasa)
