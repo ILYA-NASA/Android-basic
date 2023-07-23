@@ -1,20 +1,25 @@
 import kotlinx.coroutines.*
 
-fun main() = runBlocking {
+suspend fun main()  {
 
-    launch {
-        println(Fibonacci.take(5))
-    }
+    val scope = CoroutineScope(Dispatchers.Default)
 
-    launch {
+    scope.launch {
         println(Fibonacci.take(10))
     }
 
-    yield() // пропускаем все корутины, чтобы сохранить порядок
-    println(Fibonacci.take(15))
-
-    withTimeout(1) { // исключение обрабатывается в библиотеке
-        println(Fibonacci.take(15)) // получаем результат до TimeoutCancellationException
+    scope.launch {
+        println(Fibonacci.take(15))
     }
+
+    scope.launch {
+        while (scope.isActive) {
+            delay(300)
+            print(".")
+        }
+    }
+
+    println(Fibonacci.take(5))
+    println(Fibonacci.take(35))
 
 }
