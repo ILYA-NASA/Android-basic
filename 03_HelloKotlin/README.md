@@ -23,4 +23,4 @@
 /* */ - закомментировать несколько строк или блок кода (комбинация клавиш Ctrl+Shift+/).  
 Закомментированный код не выполняется.
 
-### [Примеры](https://github.com/ILYA-NASA/Android-basic/blob/master/03_HelloKotlin/hw001/src/main/kotlin/Main.kt) комментирования кода и вывода текста в консоль.
+### :paperclip: [Примеры](https://github.com/ILYA-NASA/Android-basic/blob/master/03_HelloKotlin/hw001/src/main/kotlin/Main.kt) комментирования кода и вывода текста в консоль.

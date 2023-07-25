@@ -72,4 +72,4 @@ anonymous(123)
 **{ A, B -> C }**, где **A** и **B** — параметры функции, согласно её сигнатуре, **С** — тело функции.  
 Выражение всегда заключено в фигурные скобки!
 
-### [Решение задачи](https://github.com/ILYA-NASA/Android-basic/blob/master/05_Functions/practice/src/main/kotlin/Main.kt) на [дешифрование](https://github.com/ILYA-NASA/Encryption-Decryption), в том числе с преминением функции высшего порядка 
+### :paperclip: [Решение задачи](https://github.com/ILYA-NASA/Android-basic/blob/master/05_Functions/practice/src/main/kotlin/Main.kt) на [дешифрование](https://github.com/ILYA-NASA/Encryption-Decryption), в том числе с преминением функции высшего порядка 

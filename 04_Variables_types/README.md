@@ -126,4 +126,4 @@ Nullable типы:
 ● оператор безопасного вызова **(?.)**. Он позволяет выполнить действие с переменной только в том   
 случае, если она указывает на какие-то данные  
 
-### [Решение кейса](https://github.com/ILYA-NASA/Android-basic/blob/master/04_Variables_types/untitled/src/main/kotlin/Main.kt) с инициализацией переменных разного типа и выводом результата в консоль. 
+### :paperclip: [Решение кейса](https://github.com/ILYA-NASA/Android-basic/blob/master/04_Variables_types/untitled/src/main/kotlin/Main.kt) с инициализацией переменных разного типа и выводом результата в консоль. 
