@@ -1,8 +1,6 @@
 ![pngaaa com-15864](https://github.com/ILYA-NASA/Android-basic/assets/99810114/941eb7d4-655d-40a0-b26e-98b1af017323)
 
-## Конспекты лекций и:paperclip:решения практических заданий:
-
-:ballot_box_with_check: [Введение](https://github.com/ILYA-NASA/Android-basic/tree/master/03_HelloKotlin)  
+:ballot_box_with_check: [Введение в Kotlin](https://github.com/ILYA-NASA/Android-basic/tree/master/03_HelloKotlin)  
 :ballot_box_with_check: [Переменные](https://github.com/ILYA-NASA/Android-basic/tree/master/04_Variables_types)  
 :ballot_box_with_check: [Функции](https://github.com/ILYA-NASA/Android-basic/tree/master/05_Functions)  
 :ballot_box_with_check: [Условия и циклы](https://github.com/ILYA-NASA/Android-basic/tree/master/06_Conditional_Expressions_Loops)  
@@ -14,7 +12,7 @@
 :ballot_box_with_check: [Сравнение типов](https://github.com/ILYA-NASA/Android-basic/tree/master/12_Generics_And_Utility_Classes)  
 :ballot_box_with_check: [Исключения](https://github.com/ILYA-NASA/Android-basic/tree/master/13_Exceptions)  
 :ballot_box_with_check: [Корутины](https://github.com/ILYA-NASA/Android-basic/tree/master/14_Coroutines)  
-:white_square_button: Потоки данных  
+:white_square_button: [Потоки данных](https://github.com/ILYA-NASA/Android-basic/tree/master/15_Flow)  
 :white_square_button: Начало работы  
 :white_square_button: Верстка  
 :white_square_button: Компоненты  
