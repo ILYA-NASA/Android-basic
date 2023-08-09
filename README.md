@@ -12,8 +12,8 @@
 :ballot_box_with_check: [Сравнение типов](https://github.com/ILYA-NASA/Android-basic/tree/master/12_Generics_And_Utility_Classes)  
 :ballot_box_with_check: [Исключения](https://github.com/ILYA-NASA/Android-basic/tree/master/13_Exceptions)  
 :ballot_box_with_check: [Корутины](https://github.com/ILYA-NASA/Android-basic/tree/master/14_Coroutines)  
-:white_square_button: [Потоки данных](https://github.com/ILYA-NASA/Android-basic/tree/master/15_Flow)  
-:white_square_button: Начало работы  
+:ballot_box_with_check: [Потоки данных](https://github.com/ILYA-NASA/Android-basic/tree/master/15_Flow)  
+:white_square_button: [Начало работы в Android Studio](https://github.com/ILYA-NASA/Android-basic/tree/master/16_HelloAndroid)  
 :white_square_button: Верстка  
 :white_square_button: Компоненты  
 :white_square_button: ConstraintLayout  
