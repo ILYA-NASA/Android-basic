@@ -10,32 +10,45 @@
         style="@style/TaskStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/initial_text"
         android:textColor="#008000"
         tools:text="@tools:sample/lorem/random" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/counter"
+        android:id="@+id/seats_counter"
         style="@style/TaskStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center|bottom"
-        android:text="0"
-        android:textSize="100sp" />
+        android:textSize="100sp"
+        tools:text="50" />
+
+    <Button
+        android:id="@+id/counter_reset"
+        style="@style/TaskStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:textSize="50sp"
+        android:visibility="invisible"
+        android:text="Сброс" />
 
     <ImageButton
         android:id="@+id/incrementButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
+        android:background="@color/design_default_color_background"
         android:padding="35dp"
-        android:src="@drawable/person_add" />
+        android:src="@drawable/person_add"
+        android:visibility="visible" />
 
     <ImageButton
         android:id="@+id/decrementButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|start"
+        android:background="@color/design_default_color_background"
         android:padding="35dp"
-        android:src="@drawable/person_remove" />
+        android:src="@drawable/person_remove"
+        android:visibility="visible" />
 </FrameLayout>
