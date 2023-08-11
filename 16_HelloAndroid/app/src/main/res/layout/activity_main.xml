@@ -6,12 +6,30 @@
     tools:context=".MainActivity">
 
     <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/emptyBus"
+        style="@style/TaskStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/empty_bus_text"
+        android:textColor="#008000"
+        android:visibility="invisible" />
+
+    <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/seatsStatus"
         style="@style/TaskStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textColor="#008000"
-        tools:text="@tools:sample/lorem/random" />
+        android:textColor="#0000FF"
+        android:visibility="invisible" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/fullBus"
+        style="@style/TaskStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/full_bus_text"
+        android:textColor="#FF0000"
+        android:visibility="invisible" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/seats_counter"
@@ -28,9 +46,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center|top"
+        android:text="@string/cancel_text"
         android:textSize="50sp"
-        android:visibility="invisible"
-        android:text="Сброс" />
+        android:visibility="invisible" />
 
     <ImageButton
         android:id="@+id/incrementButton"
