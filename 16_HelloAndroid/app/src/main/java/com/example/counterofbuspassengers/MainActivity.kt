@@ -65,6 +65,6 @@ class MainActivity : AppCompatActivity() {
 
     companion object {
         const val MIN_PASSENGERS = 1
-        const val MAX_PASSENGERS = 5
+        const val MAX_PASSENGERS = 50
     }
 }
