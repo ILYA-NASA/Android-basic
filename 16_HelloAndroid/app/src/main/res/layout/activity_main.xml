@@ -12,7 +12,7 @@
         android:layout_height="wrap_content"
         android:text="@string/empty_bus_text"
         android:textColor="#008000"
-        android:visibility="invisible" />
+        android:visibility="visible" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/current_seats_text_view"
