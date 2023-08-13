@@ -12,42 +12,42 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.emptyBus.visibility = View.VISIBLE
-        binding.seatsCounter.text = counter.toString()
+        binding.freeSeatsTextView.visibility = View.VISIBLE
+        binding.counterTextView.text = counter.toString()
 
-        binding.counterReset.setOnClickListener {
+        binding.resetButton.setOnClickListener {
             counter = 0
-            binding.seatsCounter.text = counter.toString()
-            binding.counterReset.visibility = View.INVISIBLE
-            binding.fullBus.visibility = View.INVISIBLE
-            binding.emptyBus.visibility = View.VISIBLE
+            binding.counterTextView.text = counter.toString()
+            binding.resetButton.visibility = View.INVISIBLE
+            binding.tooManyPassengersTextView.visibility = View.INVISIBLE
+            binding.freeSeatsTextView.visibility = View.VISIBLE
         }
 
-        binding.incrementButton.setOnClickListener {
+        binding.plusButton.setOnClickListener {
             counter++
-            binding.seatsCounter.text = counter.toString()
-            binding.emptyBus.visibility = View.INVISIBLE
-            binding.seatsStatus.visibility = View.VISIBLE
-            "Seats left: ${MAX_PASSENGERS - counter}".also { binding.seatsStatus.text = it }
+            binding.counterTextView.text = counter.toString()
+            binding.freeSeatsTextView.visibility = View.INVISIBLE
+            binding.currentSeatsTextView.visibility = View.VISIBLE
+            "Seats left: ${MAX_PASSENGERS - counter}".also { binding.currentSeatsTextView.text = it }
             if (counter >= MAX_PASSENGERS) {
-                binding.seatsStatus.visibility = View.INVISIBLE
-                binding.fullBus.visibility = View.VISIBLE
-                binding.counterReset.visibility = View.VISIBLE
+                binding.currentSeatsTextView.visibility = View.INVISIBLE
+                binding.tooManyPassengersTextView.visibility = View.VISIBLE
+                binding.resetButton.visibility = View.VISIBLE
             }
         }
 
-        binding.decrementButton.setOnClickListener {
+        binding.minusButton.setOnClickListener {
             maxOf(MIN_PASSENGERS, counter--).also { counter = it - 1 }
-            binding.seatsCounter.text = counter.toString()
+            binding.counterTextView.text = counter.toString()
             if (counter < MAX_PASSENGERS) {
-                binding.fullBus.visibility = View.INVISIBLE
-                binding.counterReset.visibility = View.INVISIBLE
-                binding.seatsStatus.visibility = View.VISIBLE
-                "Seats left: ${MAX_PASSENGERS - counter}".also { binding.seatsStatus.text = it }
+                binding.tooManyPassengersTextView.visibility = View.INVISIBLE
+                binding.resetButton.visibility = View.INVISIBLE
+                binding.currentSeatsTextView.visibility = View.VISIBLE
+                "Seats left: ${MAX_PASSENGERS - counter}".also { binding.currentSeatsTextView.text = it }
             }
             if (counter == 0) {
-                binding.seatsStatus.visibility = View.INVISIBLE
-                binding.emptyBus.visibility = View.VISIBLE
+                binding.currentSeatsTextView.visibility = View.INVISIBLE
+                binding.freeSeatsTextView.visibility = View.VISIBLE
             }
         }
 
@@ -55,6 +55,6 @@ class MainActivity : AppCompatActivity() {
 
     companion object {
         const val MIN_PASSENGERS = 1
-        const val MAX_PASSENGERS = 50
+        const val MAX_PASSENGERS = 5
     }
 }

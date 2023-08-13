@@ -6,7 +6,7 @@
     tools:context=".MainActivity">
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/emptyBus"
+        android:id="@+id/free_seats_text_view"
         style="@style/TaskStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -15,7 +15,7 @@
         android:visibility="invisible" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/seatsStatus"
+        android:id="@+id/current_seats_text_view"
         style="@style/TaskStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -23,7 +23,7 @@
         android:visibility="invisible" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/fullBus"
+        android:id="@+id/too_many_passengers_text_view"
         style="@style/TaskStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -32,7 +32,7 @@
         android:visibility="invisible" />
 
     <androidx.appcompat.widget.AppCompatTextView
-        android:id="@+id/seats_counter"
+        android:id="@+id/counter_text_view"
         style="@style/TaskStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -41,7 +41,7 @@
         tools:text="50" />
 
     <Button
-        android:id="@+id/counter_reset"
+        android:id="@+id/reset_button"
         style="@style/TaskStyle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -51,7 +51,7 @@
         android:visibility="invisible" />
 
     <ImageButton
-        android:id="@+id/incrementButton"
+        android:id="@+id/plus_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
@@ -61,7 +61,7 @@
         android:visibility="visible" />
 
     <ImageButton
-        android:id="@+id/decrementButton"
+        android:id="@+id/minus_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|start"

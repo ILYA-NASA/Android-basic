@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">CounterOfBusPassengers</string>
     <string name="initial_text">initial text</string>
-    <string name="cancel_text">Сброс</string>
+    <string name="cancel_text">Reset</string>
     <string name="empty_bus_text">All seats are free</string>
     <string name="full_bus_text">There are too many passengers!</string>
 </resources>
