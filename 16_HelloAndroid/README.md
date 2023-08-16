@@ -71,4 +71,4 @@ Environment (JRE).
 один или несколько сгруппированных атрибутов форматирования,
 которые отвечают за внешний вид и поведение элементов или окна.
 
-### :paperclip: [Приложение-счётчик](https://github.com/ILYA-NASA/Android-basic/blob/master/16_HelloAndroid/TASK.md) для [подсчёта пассажиров, входящих в автобус](https://github.com/ILYA-NASA/Android-basic/tree/master/16_HelloAndroid/app/src/main) разработанное с применением View Binding для связывания вёрстки с кодом.
+### :paperclip: [Приложение-счётчик](https://github.com/ILYA-NASA/Android-basic/tree/master/16_HelloAndroid/app/src/main) для [подсчёта пассажиров, входящих в автобус](https://github.com/ILYA-NASA/Android-basic/blob/master/16_HelloAndroid/TASK.md) разработанное с применением View Binding для связывания вёрстки с кодом.
