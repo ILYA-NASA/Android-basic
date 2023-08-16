@@ -1,5 +1,7 @@
 Создайте CustomView по примерному шаблону какого-либо поста в соцсети, используя знания о ViewGroup.  
 
+![image](https://github.com/ILYA-NASA/Android-basic/assets/99810114/9624f3f1-845e-4557-b7a5-306f4d60bdeb)
+
 Вёрстка должна быть с отступами (все отступы в макете 16dp).  
 
 CustomView должен встраиваться в main_activity.xml и отображаться при запуске приложения.  
