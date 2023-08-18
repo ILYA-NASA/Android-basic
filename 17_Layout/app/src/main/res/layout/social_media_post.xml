@@ -26,7 +26,7 @@
             android:padding="16dp">
 
             <TextView
-                android:id="@+id/my_custom_smp_name_text"
+                android:id="@+id/name_social_media_post"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="16dp"
@@ -34,7 +34,7 @@
                 tools:text="@tools:sample/lorem/random" />
 
             <TextView
-                android:id="@+id/my_custom_smp_status_text"
+                android:id="@+id/status_social_media_post"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_marginVertical="16dp"
@@ -46,7 +46,6 @@
     </LinearLayout>
 
     <TextView
-        android:id="@+id/my_custom_smp_about_text"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
