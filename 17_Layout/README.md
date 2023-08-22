@@ -72,4 +72,4 @@ ViewGroup.
 ● экономит время  
 ● с универсальной ViewGroup удобно взаимодействовать через код  
 
-### :paperclip:  [CustomView](https://github.com/ILYA-NASA/Android-basic/blob/master/17_Layout/app/src/main/res/layout/my_custom_smp.xml) по [шаблону поста в соцсети](https://github.com/ILYA-NASA/Android-basic/blob/master/17_Layout/TASK.md), с применением комбинирования ViewGroup.
+### :paperclip:  [CustomView](https://github.com/ILYA-NASA/Android-basic/blob/master/17_Layout/app/src/main/res/layout/social_media_post.xml) по [шаблону поста в соцсети](https://github.com/ILYA-NASA/Android-basic/blob/master/17_Layout/TASK.md), с применением комбинирования ViewGroup.
