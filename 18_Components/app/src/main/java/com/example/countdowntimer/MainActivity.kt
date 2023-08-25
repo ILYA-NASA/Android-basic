@@ -1,8 +1,15 @@
 package com.example.countdowntimer
 
 import android.os.Bundle
+import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import com.example.countdowntimer.databinding.ActivityMainBinding
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.cancel
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.isActive
+import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
     private var currentProgress = 0
@@ -12,8 +19,9 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         val updateProgress = {
-            binding.buttonStartStop.text = "START"
             binding.slider.isEnabled = true
+            binding.buttonStart.visibility = View.VISIBLE
+            binding.buttonStop.visibility = View.INVISIBLE
             currentProgress = binding.slider.value.toInt()
             binding.progressBarCircular.max = currentProgress
             binding.textCounter.text = currentProgress.toString()
@@ -23,14 +31,27 @@ class MainActivity : AppCompatActivity() {
         binding.slider.addOnChangeListener { _, _, _ ->
             updateProgress()
         }
-        binding.buttonStartStop.setOnClickListener {
-            if (currentProgress > 0) {
-                binding.buttonStartStop.text = "STOP"
-                binding.slider.isEnabled = false
-                currentProgress--
-                binding.textCounter.text = currentProgress.toString()
-                binding.progressBarCircular.progress = currentProgress
-            } else updateProgress.invoke()
+        binding.buttonStart.setOnClickListener {
+            binding.slider.isEnabled = false
+            binding.buttonStart.visibility = View.INVISIBLE
+            binding.buttonStop.visibility = View.VISIBLE
+            val scope = CoroutineScope(Dispatchers.Main)
+            scope.launch {
+                while (scope.isActive) {
+                    delay(1000)
+                    currentProgress--
+                    binding.textCounter.text = currentProgress.toString()
+                    binding.progressBarCircular.progress = currentProgress
+                    if (currentProgress == 0) {
+                        scope.cancel()
+                    }
+                    binding.buttonStop.setOnClickListener {
+                        scope.cancel()
+                        updateProgress()
+                    }
+                }
+                updateProgress.invoke()
+            }
         }
     }
 }
