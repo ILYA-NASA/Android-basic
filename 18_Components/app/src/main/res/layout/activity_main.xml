@@ -6,6 +6,30 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="@string/countdown_timer"
+        android:textSize="30sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/progressBarCircular"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="50sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/progressBarCircular"
+        app:layout_constraintEnd_toEndOf="@+id/progressBarCircular"
+        app:layout_constraintStart_toStartOf="@+id/progressBarCircular"
+        app:layout_constraintTop_toTopOf="@+id/progressBarCircular"
+        tools:text="50" />
+
     <ProgressBar
         android:id="@+id/progressBarCircular"
         android:layout_width="200dp"

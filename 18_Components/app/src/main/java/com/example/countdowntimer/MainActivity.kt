@@ -12,9 +12,11 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         binding.buttonStartStop.text = "START"
+//        binding.progressBarCircular.max = binding.slider.value.toInt()
 
         binding.buttonStartStop.setOnClickListener {
             currentProgress++
+            binding.textCounter.text = currentProgress.toString()
             binding.buttonStartStop.text = "STOP"
             binding.progressBarCircular.progress = currentProgress
         }
