@@ -11,14 +11,26 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        binding.buttonStartStop.text = "START"
-//        binding.progressBarCircular.max = binding.slider.value.toInt()
-
-        binding.buttonStartStop.setOnClickListener {
-            currentProgress++
+        val updateProgress = {
+            binding.buttonStartStop.text = "START"
+            binding.slider.isEnabled = true
+            currentProgress = binding.slider.value.toInt()
+            binding.progressBarCircular.max = currentProgress
             binding.textCounter.text = currentProgress.toString()
-            binding.buttonStartStop.text = "STOP"
             binding.progressBarCircular.progress = currentProgress
+        }
+        updateProgress()
+        binding.slider.addOnChangeListener { _, _, _ ->
+            updateProgress()
+        }
+        binding.buttonStartStop.setOnClickListener {
+            if (currentProgress > 0) {
+                binding.buttonStartStop.text = "STOP"
+                binding.slider.isEnabled = false
+                currentProgress--
+                binding.textCounter.text = currentProgress.toString()
+                binding.progressBarCircular.progress = currentProgress
+            } else updateProgress.invoke()
         }
     }
 }
