@@ -3,4 +3,5 @@
     <string name="countdown_timer">Countdown Timer</string>
     <string name="start">START</string>
     <string name="stop">STOP</string>
+    <string name="timer_task_finished">Timer Task Finished</string>
 </resources>

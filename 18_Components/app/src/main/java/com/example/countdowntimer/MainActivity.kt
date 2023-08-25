@@ -21,6 +21,7 @@ class MainActivity : AppCompatActivity() {
         val updateProgress = {
             binding.slider.isEnabled = true
             binding.buttonStart.visibility = View.VISIBLE
+            binding.textTimerTaskFinished.visibility = View.INVISIBLE
             binding.buttonStop.visibility = View.INVISIBLE
             currentProgress = binding.slider.value.toInt()
             binding.progressBarCircular.max = currentProgress
@@ -43,6 +44,8 @@ class MainActivity : AppCompatActivity() {
                     binding.textCounter.text = currentProgress.toString()
                     binding.progressBarCircular.progress = currentProgress
                     if (currentProgress == 0) {
+                        binding.textTimerTaskFinished.visibility = View.VISIBLE
+                        delay(1000)
                         scope.cancel()
                     }
                     binding.buttonStop.setOnClickListener {
