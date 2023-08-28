@@ -28,5 +28,4 @@ fun main() {
     secondTV.channelSwitchToButtonUppAndDown()
     secondTV.channelSwitchToButtonUppAndDown()
     secondTV.channelSwitchToNumber(5)
-
 }
