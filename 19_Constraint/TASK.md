@@ -1,5 +1,6 @@
 ### Создайте экран по макету ниже, используя только ConstraintLayout в качестве единственной ViewGroup.  
 
+![image](https://github.com/ILYA-NASA/Android-basic/assets/99810114/042e2af8-4fb3-4ea8-94b1-4a28f373ccfb)
 
 ### Требования
 * Все отступы, кроме отступа кнопки от картинки, равны 16 dp.
