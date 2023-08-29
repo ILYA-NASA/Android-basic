@@ -15,8 +15,8 @@
 :ballot_box_with_check: [Потоки данных](https://github.com/ILYA-NASA/Android-basic/tree/master/15_Flow/README.md)  
 :ballot_box_with_check: [Начало работы в Android Studio](https://github.com/ILYA-NASA/Android-basic/tree/master/16_HelloAndroid/README.md)  
 :ballot_box_with_check: [Верстка](https://github.com/ILYA-NASA/Android-basic/blob/master/17_Layout/README.md)  
-:white_square_button: [Компоненты](https://github.com/ILYA-NASA/Android-basic/tree/master/18_Components/README.md)  
-:white_square_button: ConstraintLayout  
+:ballot_box_with_check: [Компоненты](https://github.com/ILYA-NASA/Android-basic/tree/master/18_Components/README.md)  
+:white_square_button: [ConstraintLayout](https://github.com/ILYA-NASA/Android-basic/blob/master/19_Constraint/README.md)  
 :white_square_button: Ресурсы проекта  
 :white_square_button: Экраны приложения  
 :white_square_button: Фрагменты  
