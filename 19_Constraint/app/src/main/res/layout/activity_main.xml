@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/artistNameText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
@@ -20,7 +20,7 @@
         app:layout_constraintVertical_bias="0.922" />
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/trackNameText"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
@@ -32,44 +32,45 @@
         app:layout_constraintVertical_bias="0.977" />
 
     <ImageButton
-        android:id="@+id/imageButton"
+        android:id="@+id/playButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
         android:layout_marginHorizontal="16dp"
         android:layout_marginBottom="16dp"
         android:background="@color/design_default_color_background"
-        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintBottom_toTopOf="@+id/trackNameText"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView3"
+        app:layout_constraintTop_toBottomOf="@+id/trackImage"
         app:srcCompat="@drawable/baseline_play_circle_filled_24" />
 
     <ImageButton
-        android:id="@+id/imageButton2"
+        android:id="@+id/nextTrackButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:background="@color/design_default_color_background"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton"
+        app:layout_constraintBottom_toBottomOf="@+id/playButton"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="@+id/imageButton"
-        app:layout_constraintTop_toTopOf="@+id/imageButton"
+        app:layout_constraintStart_toStartOf="@+id/playButton"
+        app:layout_constraintTop_toTopOf="@+id/playButton"
         app:srcCompat="@drawable/baseline_skip_next_24" />
 
     <ImageButton
-        android:id="@+id/imageButton3"
+        android:id="@+id/previousTrackButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="16dp"
         android:background="@color/design_default_color_background"
-        app:layout_constraintBottom_toBottomOf="@+id/imageButton"
-        app:layout_constraintEnd_toEndOf="@+id/imageButton"
+        app:layout_constraintBottom_toBottomOf="@+id/playButton"
+        app:layout_constraintEnd_toEndOf="@+id/playButton"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/imageButton"
+        app:layout_constraintTop_toTopOf="@+id/playButton"
         app:srcCompat="@drawable/baseline_skip_previous_24" />
 
     <ImageView
-        android:id="@+id/imageView3"
+        android:id="@+id/trackImage"
         android:layout_width="360dp"
         android:layout_height="360dp"
         android:layout_margin="16dp"
