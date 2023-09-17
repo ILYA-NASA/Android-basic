@@ -8,7 +8,7 @@ android {
 
     defaultConfig {
         applicationId "com.example.skillbox_hw_quiz"
-        minSdk 26
+        minSdk 24
         targetSdk 32
         versionCode 1
         versionName "1.0"
@@ -33,6 +33,7 @@ android {
     buildFeatures {
         viewBinding = true
     }
+    namespace 'com.example.skillbox_hw_quiz'
 }
 
 
