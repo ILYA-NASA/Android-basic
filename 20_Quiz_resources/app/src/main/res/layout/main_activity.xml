@@ -12,4 +12,12 @@
         android:layout_height="wrap_content"
         app:srcCompat="@drawable/welcome_picture" />
 
+    <Button
+        android:id="@+id/reset_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|bottom"
+        android:text="@string/resume_button_text"
+        android:textSize="30sp" />
+
 </FrameLayout>

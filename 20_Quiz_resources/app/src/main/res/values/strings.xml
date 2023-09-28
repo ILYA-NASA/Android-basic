@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">QUIZ</string>
+    <string name="resume_button_text">Продолжить</string>
 </resources>
