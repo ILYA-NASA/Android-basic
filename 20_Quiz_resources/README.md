@@ -39,3 +39,5 @@
 
 ### Зависимость 
 это объект, который может быть использован (как сервис).
+
+### :paperclip: [Изменение некоторых параметров, импортирование ресурсов и настройка зависимостей](https://github.com/ILYA-NASA/Android-basic/tree/master/20_Quiz_resources/app) уже существующего проекта, в соотвествии с [техническим заданием](https://github.com/ILYA-NASA/Android-basic/blob/master/20_Quiz_resources/TASK.md) (отследить изменения можно по [коммитам](https://github.com/ILYA-NASA/Android-basic/commits/master/20_Quiz_resources/app))
