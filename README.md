@@ -19,7 +19,7 @@
 :ballot_box_with_check: [ConstraintLayout](https://github.com/ILYA-NASA/Android-basic/blob/master/19_Constraint/README.md)  
 :ballot_box_with_check: [Ресурсы проекта](https://github.com/ILYA-NASA/Android-basic/blob/master/20_Quiz_resources/README.md)  
 :ballot_box_with_check: [Экраны приложения](https://github.com/ILYA-NASA/Android-basic/blob/master/20_Quiz_resources/README.md#экраны-приложения)  
-:white_square_button: Фрагменты  
+:white_square_button: [Фрагменты](https://github.com/ILYA-NASA/Android-basic/blob/master/22_quiz_fragments/README.md)  
 :white_square_button: Анимация  
 :white_square_button: Локализация приложений  
 :white_square_button: Жизненный цикл приложения  
